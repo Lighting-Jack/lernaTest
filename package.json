@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Lighting-Jack/lernaTest/issues"
   },
-  "homepage": "https://github.com/Lighting-Jack/lernaTest#readme"
+  "homepage": "https://github.com/Lighting-Jack/lernaTest#readme",
+  "dependencies": {
+    "koa": "^2.5.1"
+  }
 }
