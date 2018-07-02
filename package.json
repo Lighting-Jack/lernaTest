@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Lighting-Jack/lernaTest#readme",
   "dependencies": {
-    "koa": "^2.5.1"
+    "koa": "^2.5.1",
+    "koa-body": "^4.0.4"
   }
 }
