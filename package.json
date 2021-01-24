@@ -2,6 +2,55 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "scripts": {
+    "changelog": "lerna-changelog",
+    "commit": "git cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test",
+      "commit-msg": "npx validate-commit-msg",
+      "changelog": "lerna-changelog"
+    }
+  },
+  "changelog": {
+    "labels": {
+      "feat": ":rocket: New Feature",
+      "bug": ":bug: Bug Fix",
+      "doc": ":memo: Documentation",
+      "internal": ":house: Internal",
+      "breaking": ":boom: Breaking Change"
+    }
+  },
+  "config": {
+    "validate-commit-msg": {
+      "helpMessage": "\nPlease fix your commit message (and consider using http://npm.im/commitizen)\n",
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert",
+        "build",
+        "release",
+        "custom"
+      ],
+      "warnOnFail": false,
+      "autoFix": true
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
