@@ -12,14 +12,13 @@
   "scripts": {
     "changelog": "lerna-changelog",
     "commit": "git cz",
-    "lint": "echo lint",
-    "test": "echo test"
+    "lint": "echo 2s",
+    "test": "echo 1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run test",
-      "commit-msg": "npx validate-commit-msg"
+      "pre-push": "npm run test"
     }
   },
   "repository": {
