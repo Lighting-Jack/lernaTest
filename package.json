@@ -4,6 +4,7 @@
   "devDependencies": {
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.8",
     "lerna": "^3.22.1",
     "lerna-changelog": "^1.0.1",
     "validate-commit-msg": "^2.14.0"
@@ -16,9 +17,12 @@
     "hooks": {
       "pre-commit": "npm run lint",
       "pre-push": "npm run test",
-      "commit-msg": "npx validate-commit-msg",
-      "changelog": "lerna-changelog"
+      "commit-msg": "npx validate-commit-msg"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lou1swu/lernaTest.git"
   },
   "changelog": {
     "labels": {
